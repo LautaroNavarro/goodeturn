@@ -2,5 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-def prueba(request):
-	return HttpResponse('welcome to good-e-turn')
+def create_event(request):
+	return render(request,'create_event.html')
+
+def view_event(request):
+	return render(request,'view_event.html')

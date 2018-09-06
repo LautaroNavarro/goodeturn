@@ -1,0 +1,138 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css\style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>{% block title %} {% endblock %}</title>
+  <script type="text/javascript">
+    var contador = 0
+    function insertNewElements(parent, child, max){
+      if (contador < max){
+        contador = contador + 1
+        var form_repeat = document.getElementById(parent);
+        var claa = form_repeat.cloneNode(true);
+        form = document.getElementById(child);
+        form.appendChild(claa);
+      }
+    }
+  </script>
+</head>
+<body>
+	{% block navbar %} 
+ <!-- BARRA DE NAVEGACION-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light border">
+  <a class="navbar-brand border-right orange-color pr-2" id='color-orange'href="#">Eventbrite</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item border-right border-left p-1">
+        <a class="nav-link" href="#">BROWSE EVENT<span class="sr-only">(current)</span></a>
+        <li class="nav-item dropdown mr-auto border-right p-1">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            ORGANIZE
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Overview</a>
+            <a class="dropdown-item" href="#">Pricing</a>
+            <a class="dropdown-item" href="#">Blog</a>
+            <a class="dropdown-item" href="#">Resources</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown mr-auto border-right p-1">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            HELP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Where are my tickets?</a>
+            <a class="dropdown-item" href="#">How to contact the event organizer</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item blue-letter" href="#">Help center</a>
+          </div>
+
+          <li class="nav-item dropdown mr-auto border-right p-1">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              PEPE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Browse Events</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Admin</a>
+              <a class="dropdown-item" href="#">Feature Flags</a>
+              <a class="dropdown-item" href="#">Experiments</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Tickets</a>
+              <a class="dropdown-item" href="#">Saved</a>
+              <a class="dropdown-item" href="#">Following</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Manage Events</a>
+              <a class="dropdown-item" href="#">Organizer Profile</a>
+              <a class="dropdown-item" href="#">Contacts</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Account Settings</a>
+              <a class="dropdown-item" href="#">Help</a>
+              <a class="dropdown-item" href="#">Log out</a>
+            </div>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 pl-2">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">CREATE EVENT</button>
+          </form>
+        </div>
+      </nav>
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+      {% block Footer %} 
+      <!-- Footer -->
+      <footer class="page-footer font-small pt-4"
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase">Eventbrite</h5>
+            <p>Events for you.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Buscar Eventos</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Descubrir eventos</a>
+              </li>
+              <li>
+                <a href="#!">Descargá la aplicación de Eventbrite</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Usar Eventbrite</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Cómo funciona</a>
+              </li>
+              <li>
+                <a href="#!">Cuánto cuesta</a>
+              </li>
+              <li>
+                <a href="#!">Blog de Eventbrite</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Eventbrite.com</a>
+      </div>
+    </footer>
+    <!-- Footer -->
+    {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+  </html>

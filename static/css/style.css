@@ -1,0 +1,93 @@
+.blue-letter{
+  color:rgb(66, 143, 244);
+}
+
+#color-orange{
+  color: #F86820;
+}
+
+
+
+
+  footer{
+    
+    background-color: #282C35;
+
+  }
+  footer div{
+    color: #ADB0B6;
+  }
+  footer a{
+    color: #D2D6DF!important;
+
+  }
+  .jzdbox1 {
+    width:615px; 
+    background:#332f2e; 
+    border-radius:5px; 
+    overflow:hidden; 
+    display:block; 
+    margin-bottom:10px; 
+    box-shadow:0 0 10px #201d1c; 
+    margin:0 auto; 
+    margin-top:100px;
+  }
+
+  .jzdcal {
+    padding:0 10px 10px 10px; 
+    box-sizing:border-box!important; 
+    background:white; 
+    background: white; 
+    background: white; 
+    background: white; 
+    background: white;
+  }
+
+  .jzdcalt {
+    font:18px 'Roboto'; 
+    font-weight:700; 
+    color:black; 
+    display:block; 
+    margin:18px 0 0 0; 
+    text-transform:uppercase; 
+    text-align:center; 
+    letter-spacing:1px;
+  }
+
+  .jzdcal span {
+    font:16px 'Roboto'; 
+    font-weight:400; 
+    color:black; 
+    text-align:center; 
+    width:80px; 
+    height:42px; 
+    display:inline-block; 
+    float:left; 
+    overflow:hidden; 
+    line-height:40px;
+  }
+
+  .jzdcal .jzdb:before {
+    opacity:0.3; 
+    content:'o';
+  }
+
+  .circle {
+    border:1px solid #00ab44; 
+    box-sizing:border-box!important; 
+    border-radius:200px!important;
+  }
+
+#fondo{
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
+  min-height: 50vh;
+  background-attachment: fixed;
+}
+.dark-overlay{
+  background-color: rgba(0,0,0,0.4);
+  min-height: 65vh;
+}
+#width{
+  width: 100%;
+}
